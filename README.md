@@ -1,6 +1,8 @@
 # Dev Tools & Productivity Apps Rankings
 
 A comprehensive ranking website for development tools and productivity applications worldwide.
+<img width="517" height="685" alt="homepage" src="https://github.com/user-attachments/assets/83276dd4-af6c-4aaf-a62b-310f62e41def" />
+<img width="326" height="673" alt="rankingpage" src="https://github.com/user-attachments/assets/87c86392-5ebd-4c01-a6f1-86e8adaccfc8" />
 
 ## How to run
 1. Install node.js
