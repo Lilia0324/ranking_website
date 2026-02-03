@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare top Dev Tools and Productivity Apps worldwide. Find the best tools to boost your development workflow and productivity.">
+    <meta name="keywords" content="Dev Tools, Productivity Apps, Development Tools, Developer Productivity">
+    <title>Dev Tools & Productivity Apps Rankings</title>
+    <link rel="icon" type="image/png" href="ranking.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="/js/regionLinks.js"></script>
+    <style>
+        /* Navigation bar styles */
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            background: #4F46E5;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 72px;
+        }
+
+        .logo-area {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            height: 56px;
+            padding: 0 6px;
+        }
+
+        .site-logo {
+            width: 136px;
+            height: 136px;
+            display: block;
+            object-fit: contain;
+        }
+
+        .logo-title {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-family: 'SF Pro Display', Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+            opacity: 0.98;
+            position: relative;
+            padding: 4px 0;
+            background: linear-gradient(
+                to right,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0.9) 50%,
+                #ffffff 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 200% center;
+            }
+            100% {
+                background-position: -200% center;
+            }
+        }
+
+        .logo-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+        }
+
+        /* Add gradient light effect */
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+        }
+
+        /* Adjust header position */
+        header {
+            margin-top: 72px;
+            background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 1rem;
+                height: 64px;
+            }
+
+            .logo-area {
+                height: 48px;
+                gap: 12px;
+            }
+
+            .site-logo {
+                width: 40px;
+                height: 40px;
+            }
+
+            .logo-title {
+                font-size: 15px;
+                letter-spacing: 0.8px;
+            }
+
+            header {
+                margin-top: 64px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-area {
+                height: 44px;
+                gap: 10px;
+            }
+
+            .site-logo {
+                width: 36px;
+                height: 36px;
+            }
+
+            .logo-title {
+                font-size: 14px;
+                letter-spacing: 0.6px;
+            }
+        }
+
+        /* Optimize header styles */
+        header {
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(125deg, 
+                #4B50F7 0%, 
+                #6366f1 25%,
+                #818cf8 50%,
+                #6366f1 75%,
+                #4B50F7 100%
+            );
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            overflow: hidden;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: -25%;
+            left: -25%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            transform: rotate(30deg);
+            animation: patternMove 20s linear infinite;
+        }
+
+        @keyframes patternMove {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, 
+                rgba(99, 102, 241, 0) 0%, 
+                rgba(99, 102, 241, 0.2) 100%
+            );
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 2rem;
+            line-height: 1.2;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 0 2rem;
+            line-height: 1.6;
+        }
+
+        /* Optimize intro section styles */
+        .intro-section {
+            background: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+        }
+
+        .intro-section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .intro-section p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Optimize search section styles */
+        .search-section {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            margin: 0;
+        }
+
+        .search-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .search-input:focus {
+            border-color: #4B50F7;
+            outline: none;
+            box-shadow: 0 2px 8px rgba(75,80,247,0.2);
+        }
+
+        .filter-container {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-button {
+            padding: 0.8rem 1.5rem;
+            background: white;
+            border: 2px solid #4B50F7;
+            border-radius: 8px;
+            color: #4B50F7;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-button:hover {
+            background: #4B50F7;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(75,80,247,0.2);
+        }
+
+        .filter-button.active {
+            background: #4B50F7;
+            color: white;
+        }
+
+        .region-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .region-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .region-card.hidden {
+            display: none;
+        }
+
+        .region-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .region-card h2 {
+            color: #007bff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .service-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex-grow: 1;
+        }
+
+        .service-link {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.2s ease;
+        }
+
+        .service-link:hover {
+            background: #e9ecef;
+            color: #007bff;
+        }
+
+        .service-icon {
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 1.1rem;
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dev Tools & Productivity Apps Rankings</h1>
+        <p>Discover the best development tools and productivity apps to supercharge your workflow worldwide</p>
+    </header>
+
+    <nav>
+        <div class="logo-area">
+            <img src="/images/lilia_logo.png" alt="Lilia Logo" class="site-logo">
+            <span class="logo-title">TOP DEV TOOLS & APPS</span>
+        </div>
+    </nav>
+
+    <section class="intro-section">
+        <h2>Choose Your Region</h2>
+        <p>Select a region to discover top-rated development tools and productivity apps. We provide detailed comparisons and rankings to help developers and teams find the perfect tools for their workflow.</p>
+    </section>
+
+    <section class="search-section">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search for a country or region..." id="searchInput">
+            <div class="filter-container">
+                <button class="filter-button active" data-region="all">All Regions</button>
+                <button class="filter-button" data-region="hot">Hot Locations</button>
+                <button class="filter-button" data-region="asia">Asia</button>
+                <button class="filter-button" data-region="europe">Europe</button>
+                <button class="filter-button" data-region="americas">Americas</button>
+                <button class="filter-button" data-region="africa">Africa</button>
+                <button class="filter-button" data-region="oceania">Oceania</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="region-grid" id="regionGrid">
+        <!-- More regions will be added via JavaScript -->
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Dev Tools & Productivity Apps Rankings. All rights reserved.</p>
+        <p class="disclaimer">Disclaimer: Some data or content on this website is generated by artificial intelligence and is intended for reference only. The information may contain inaccuracies or omissions, and users are encouraged to verify the details independently. The website is not liable for any loss or damage arising from reliance on the information provided. For accurate and up-to-date information, please consult official sources or visit the tool's official website.</p>
+    </footer>
+
+    <script>
+        // Country data
+        const countries = [
+            // Hot locations
+            { name: 'China', region: 'hot' },
+            { name: 'Hong Kong', region: 'hot' },
+            { name: 'Singapore', region: 'hot' },
+            { name: 'United States', region: 'hot' },
+            
+            // Other regions in alphabetical order
+            // Asia
+            { name: 'Afghanistan', region: 'asia' },
+            { name: 'Armenia', region: 'asia' },
+            { name: 'Azerbaijan', region: 'asia' },
+            { name: 'Bahrain', region: 'asia' },
+            { name: 'Bangladesh', region: 'asia' },
+            { name: 'Bhutan', region: 'asia' },
+            { name: 'Brunei', region: 'asia' },
+            { name: 'Cambodia', region: 'asia' },
+            { name: 'Cyprus', region: 'asia' },
+            { name: 'Georgia', region: 'asia' },
+            { name: 'India', region: 'asia' },
+            { name: 'Indonesia', region: 'asia' },
+            { name: 'Iran', region: 'asia' },
+            { name: 'Iraq', region: 'asia' },
+            { name: 'Israel', region: 'asia' },
+            { name: 'Japan', region: 'asia' },
+            { name: 'Jordan', region: 'asia' },
+            { name: 'Kazakhstan', region: 'asia' },
+            { name: 'Kuwait', region: 'asia' },
+            { name: 'Kyrgyzstan', region: 'asia' },
+            { name: 'Laos', region: 'asia' },
+            { name: 'Lebanon', region: 'asia' },
+            { name: 'Macau', region: 'asia' },
+            { name: 'Malaysia', region: 'asia' },
+            { name: 'Maldives', region: 'asia' },
+            { name: 'Mongolia', region: 'asia' },
+            { name: 'Myanmar', region: 'asia' },
+            { name: 'Nepal', region: 'asia' },
+            { name: 'North Korea', region: 'asia' },
+            { name: 'Oman', region: 'asia' },
+            { name: 'Pakistan', region: 'asia' },
+            { name: 'Palestine', region: 'asia' },
+            { name: 'Philippines', region: 'asia' },
+            { name: 'Qatar', region: 'asia' },
+            { name: 'Saudi Arabia', region: 'asia' },
+            { name: 'South Korea', region: 'asia' },
+            { name: 'Sri Lanka', region: 'asia' },
+            { name: 'Syria', region: 'asia' },
+            { name: 'Taiwan', region: 'asia' },
+            { name: 'Tajikistan', region: 'asia' },
+            { name: 'Thailand', region: 'asia' },
+            { name: 'Timor-Leste', region: 'asia' },
+            { name: 'Turkey', region: 'asia' },
+            { name: 'Turkmenistan', region: 'asia' },
+            { name: 'United Arab Emirates', region: 'asia' },
+            { name: 'Uzbekistan', region: 'asia' },
+            { name: 'Vietnam', region: 'asia' },
+            { name: 'Yemen', region: 'asia' },
+
+            // Europe
+            { name: 'Albania', region: 'europe' },
+            { name: 'Andorra', region: 'europe' },
+            { name: 'Austria', region: 'europe' },
+            { name: 'Belarus', region: 'europe' },
+            { name: 'Belgium', region: 'europe' },
+            { name: 'Bosnia and Herzegovina', region: 'europe' },
+            { name: 'Bulgaria', region: 'europe' },
+            { name: 'Croatia', region: 'europe' },
+            { name: 'Czech Republic', region: 'europe' },
+            { name: 'Denmark', region: 'europe' },
+            { name: 'Estonia', region: 'europe' },
+            { name: 'Finland', region: 'europe' },
+            { name: 'France', region: 'europe' },
+            { name: 'Germany', region: 'europe' },
+            { name: 'Greece', region: 'europe' },
+            { name: 'Hungary', region: 'europe' },
+            { name: 'Iceland', region: 'europe' },
+            { name: 'Ireland', region: 'europe' },
+            { name: 'Italy', region: 'europe' },
+            { name: 'Latvia', region: 'europe' },
+            { name: 'Liechtenstein', region: 'europe' },
+            { name: 'Lithuania', region: 'europe' },
+            { name: 'Luxembourg', region: 'europe' },
+            { name: 'Malta', region: 'europe' },
+            { name: 'Moldova', region: 'europe' },
+            { name: 'Monaco', region: 'europe' },
+            { name: 'Montenegro', region: 'europe' },
+            { name: 'Netherlands', region: 'europe' },
+            { name: 'North Macedonia', region: 'europe' },
+            { name: 'Norway', region: 'europe' },
+            { name: 'Poland', region: 'europe' },
+            { name: 'Portugal', region: 'europe' },
+            { name: 'Romania', region: 'europe' },
+            { name: 'Russia', region: 'europe' },
+            { name: 'San Marino', region: 'europe' },
+            { name: 'Serbia', region: 'europe' },
+            { name: 'Slovakia', region: 'europe' },
+            { name: 'Slovenia', region: 'europe' },
+            { name: 'Spain', region: 'europe' },
+            { name: 'Sweden', region: 'europe' },
+            { name: 'Switzerland', region: 'europe' },
+            { name: 'Ukraine', region: 'europe' },
+            { name: 'United Kingdom', region: 'europe' },
+            { name: 'Vatican City', region: 'europe' },
+
+            // Americas
+            { name: 'Antigua and Barbuda', region: 'americas' },
+            { name: 'Argentina', region: 'americas' },
+            { name: 'Bahamas', region: 'americas' },
+            { name: 'Barbados', region: 'americas' },
+            { name: 'Belize', region: 'americas' },
+            { name: 'Bolivia', region: 'americas' },
+            { name: 'Brazil', region: 'americas' },
+            { name: 'Canada', region: 'americas' },
+            { name: 'Chile', region: 'americas' },
+            { name: 'Colombia', region: 'americas' },
+            { name: 'Costa Rica', region: 'americas' },
+            { name: 'Cuba', region: 'americas' },
+            { name: 'Dominica', region: 'americas' },
+            { name: 'Dominican Republic', region: 'americas' },
+            { name: 'Ecuador', region: 'americas' },
+            { name: 'El Salvador', region: 'americas' },
+            { name: 'Grenada', region: 'americas' },
+            { name: 'Guatemala', region: 'americas' },
+            { name: 'Guyana', region: 'americas' },
+            { name: 'Haiti', region: 'americas' },
+            { name: 'Honduras', region: 'americas' },
+            { name: 'Jamaica', region: 'americas' },
+            { name: 'Mexico', region: 'americas' },
+            { name: 'Nicaragua', region: 'americas' },
+            { name: 'Panama', region: 'americas' },
+            { name: 'Paraguay', region: 'americas' },
+            { name: 'Peru', region: 'americas' },
+            { name: 'Saint Kitts and Nevis', region: 'americas' },
+            { name: 'Saint Lucia', region: 'americas' },
+            { name: 'Saint Vincent and the Grenadines', region: 'americas' },
+            { name: 'Suriname', region: 'americas' },
+            { name: 'Trinidad and Tobago', region: 'americas' },
+            { name: 'Uruguay', region: 'americas' },
+            { name: 'Venezuela', region: 'americas' },
+
+            // Africa
+            { name: 'Algeria', region: 'africa' },
+            { name: 'Angola', region: 'africa' },
+            { name: 'Benin', region: 'africa' },
+            { name: 'Botswana', region: 'africa' },
+            { name: 'Burkina Faso', region: 'africa' },
+            { name: 'Burundi', region: 'africa' },
+            { name: 'Cabo Verde', region: 'africa' },
+            { name: 'Cameroon', region: 'africa' },
+            { name: 'Central African Republic', region: 'africa' },
+            { name: 'Chad', region: 'africa' },
+            { name: 'Comoros', region: 'africa' },
+            { name: 'Congo', region: 'africa' },
+            { name: 'Côte d\'Ivoire', region: 'africa' },
+            { name: 'Democratic Republic of the Congo', region: 'africa' },
+            { name: 'Djibouti', region: 'africa' },
+            { name: 'Egypt', region: 'africa' },
+            { name: 'Equatorial Guinea', region: 'africa' },
+            { name: 'Eritrea', region: 'africa' },
+            { name: 'Eswatini', region: 'africa' },
+            { name: 'Ethiopia', region: 'africa' },
+            { name: 'Gabon', region: 'africa' },
+            { name: 'Gambia', region: 'africa' },
+            { name: 'Ghana', region: 'africa' },
+            { name: 'Guinea', region: 'africa' },
+            { name: 'Guinea-Bissau', region: 'africa' },
+            { name: 'Kenya', region: 'africa' },
+            { name: 'Lesotho', region: 'africa' },
+            { name: 'Liberia', region: 'africa' },
+            { name: 'Libya', region: 'africa' },
+            { name: 'Madagascar', region: 'africa' },
+            { name: 'Malawi', region: 'africa' },
+            { name: 'Mali', region: 'africa' },
+            { name: 'Mauritania', region: 'africa' },
+            { name: 'Mauritius', region: 'africa' },
+            { name: 'Morocco', region: 'africa' },
+            { name: 'Mozambique', region: 'africa' },
+            { name: 'Namibia', region: 'africa' },
+            { name: 'Niger', region: 'africa' },
+            { name: 'Nigeria', region: 'africa' },
+            { name: 'Rwanda', region: 'africa' },
+            { name: 'Sao Tome and Principe', region: 'africa' },
+            { name: 'Senegal', region: 'africa' },
+            { name: 'Seychelles', region: 'africa' },
+            { name: 'Sierra Leone', region: 'africa' },
+            { name: 'Somalia', region: 'africa' },
+            { name: 'South Africa', region: 'africa' },
+            { name: 'South Sudan', region: 'africa' },
+            { name: 'Sudan', region: 'africa' },
+            { name: 'Tanzania', region: 'africa' },
+            { name: 'Togo', region: 'africa' },
+            { name: 'Tunisia', region: 'africa' },
+            { name: 'Uganda', region: 'africa' },
+            { name: 'Zambia', region: 'africa' },
+            { name: 'Zimbabwe', region: 'africa' },
+
+            // Oceania
+            { name: 'Australia', region: 'oceania' },
+            { name: 'Fiji', region: 'oceania' },
+            { name: 'Kiribati', region: 'oceania' },
+            { name: 'Marshall Islands', region: 'oceania' },
+            { name: 'Micronesia', region: 'oceania' },
+            { name: 'Nauru', region: 'oceania' },
+            { name: 'New Zealand', region: 'oceania' },
+            { name: 'Palau', region: 'oceania' },
+            { name: 'Papua New Guinea', region: 'oceania' },
+            { name: 'Samoa', region: 'oceania' },
+            { name: 'Solomon Islands', region: 'oceania' },
+            { name: 'Tonga', region: 'oceania' },
+            { name: 'Tuvalu', region: 'oceania' },
+            { name: 'Vanuatu', region: 'oceania' }
+        ];
+
+        // Generate country cards
+        function createCountryCard(country) {
+            const card = document.createElement('div');
+            card.className = 'region-card';
+            card.setAttribute('data-region', country.region);
+            
+            // Convert country name to URL-friendly format
+            const countryUrl = country.name.toLowerCase().replace(/['\s]+/g, '-');
+            
+            card.innerHTML = `
+                <h2>${country.name}</h2>
+                <div class="service-links">
+                    <a href="/top-dev-tools-in-${countryUrl}" class="service-link">
+                        <span class="service-icon">💻</span>
+                        Dev Tools in ${country.name}
+                    </a>
+                    <a href="/top-productivity-apps-in-${countryUrl}" class="service-link">
+                        <span class="service-icon">🚀</span>
+                        Productivity Apps in ${country.name}
+                    </a>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        // Filter cards
+        function filterCards() {
+            const searchText = document.getElementById('searchInput').value.toLowerCase();
+            const activeRegion = document.querySelector('.filter-button.active').getAttribute('data-region');
+            const cards = document.querySelectorAll('.region-card');
+            let hasVisibleCards = false;
+
+            cards.forEach(card => {
+                const countryName = card.querySelector('h2').textContent.toLowerCase();
+                const cardRegion = card.getAttribute('data-region');
+                
+                const matchesSearch = countryName.includes(searchText);
+                const matchesRegion = activeRegion === 'all' || cardRegion === activeRegion;
+                
+                if (matchesSearch && matchesRegion) {
+                    card.classList.remove('hidden');
+                    hasVisibleCards = true;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Show no results message
+            const existingNoResults = document.querySelector('.no-results');
+            if (existingNoResults) {
+                existingNoResults.remove();
+            }
+
+            if (!hasVisibleCards) {
+                const noResults = document.createElement('div');
+                noResults.className = 'no-results';
+                noResults.textContent = 'No countries found matching your criteria';
+                document.getElementById('regionGrid').appendChild(noResults);
+            }
+        }
+
+        // Initialize page
+        function initializePage() {
+            const grid = document.getElementById('regionGrid');
+            
+            // Add country cards
+            countries.forEach(country => {
+                grid.appendChild(createCountryCard(country));
+            });
+
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', filterCards);
+
+            // Region filter functionality
+            const filterButtons = document.querySelectorAll('.filter-button');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    e.target.classList.add('active');
+                    filterCards();
+                });
+            });
+        }
+
+        // Initialize after page load
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+</html> 

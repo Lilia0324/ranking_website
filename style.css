@@ -1,0 +1,522 @@
+/* Whole page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    min-width: 1024px; /* set minimum width */
+    overflow-x: auto; /* show horizontal scrollbar when content exceeds */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #007bff, #5400b3);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+/* Unify the width of sections, aligning it with the table */
+.table-container,
+.intro,
+.info,
+.cta {
+    width: 90%;
+    max-width: 1200px; /* set maximum width, avoid stretching */
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.intro ul {
+    display: inline-block;
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Center the content of other sections */
+.intro,
+.info,
+.cta {
+    text-align: center;
+}
+
+/* Table style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Bold the Company column */
+td:nth-child(2) {
+    font-weight: bold;
+}
+
+/* Left align the Introduction column */
+td:nth-child(3) {
+    text-align: left;
+}
+
+th {
+    background: #007bff;
+    color: white;
+    font-size: 1.1em;
+}
+
+/* Style the number in the Rank column */
+td.rank {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    position: relative;
+    padding: 15px;
+}
+
+td.rank::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+td.rank span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Strengths and Weaknesses vertical list */
+td.strengths {
+    text-align: left;
+}
+
+td ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+td.strengths ul li {
+    padding-left: 25px;
+    position: relative;
+}
+
+/* Strengths column (green checkmark) */
+td.strengths ul li::before {
+    content: "✓";
+    color: #00b300;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+}
+
+/* Select EOR service section */
+.info h2 {
+    margin-bottom: 15px;
+}
+
+.info ul {
+    display: inline-block;
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* CTA section */
+.cta h2 {
+    margin-bottom: 15px;
+}
+
+/* Button style */
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a.button:hover {
+    background: #0056b3;
+}
+
+/* Footer style */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Time selector style */
+.time-selector {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.selector-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.selector-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.selector-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.time-selector select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    background: white;
+    min-width: 100px;
+}
+
+.selector-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.time-selector button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.time-selector .nav-button {
+    background: #f8f9fa;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.time-selector .nav-button:hover {
+    background: #007bff;
+    color: white;
+}
+
+.time-selector .current-button {
+    background: #007bff;
+    color: white;
+}
+
+.time-selector .current-button:hover {
+    background: #0056b3;
+}
+
+#period-display {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #666;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #dc3545;
+    margin-top: 10px;
+    font-size: 0.9em;
+    background: #fff3f3;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffcdd2;
+}
+
+/* Loading status style */
+#loading {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    color: #666;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#loading:after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border: 2px solid #007bff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive adjustment */
+@media (max-width: 1024px) {
+    body {
+        min-width: 1024px; /* keep minimum width */
+    }
+    
+    .table-container,
+    .intro,
+    .info,
+    .cta {
+        width: 90%;
+        min-width: 900px; /* set minimum width */
+    }
+    
+    table {
+        min-width: 900px; /* set minimum width */
+    }
+}
+
+/* Last updated time style */
+#last-updated {
+    text-align: right;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.disclaimer {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.4;
+    font-style: italic;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    background: #4F46E5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 72px;
+}
+
+.logo-area {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    height: 48px;
+    padding: 0 6px;
+}
+
+.site-logo {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.logo-title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'SF Pro Display', Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+    opacity: 0.98;
+    position: relative;
+    padding: 4px 0;
+    background: linear-gradient(
+        to right,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.9) 50%,
+        #ffffff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 200% center;
+    }
+    100% {
+        background-position: -200% center;
+    }
+}
+
+.logo-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+/* Add gradient light effect */
+nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+/* Common page header styles */
+.page-header {
+    margin-top: 72px;
+    min-height: 300px;
+    background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        padding: 0 1rem;
+        height: 64px;
+    }
+
+    .logo-area {
+        height: 44px;
+        gap: 12px;
+    }
+
+    .site-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo-title {
+        font-size: 15px;
+        letter-spacing: 0.8px;
+    }
+
+    .page-header {
+        margin-top: 64px;
+        min-height: 250px;
+        padding: 2rem 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-area {
+        height: 40px;
+        gap: 10px;
+    }
+
+    .site-logo {
+        width: 28px;
+        height: 28px;
+    }
+
+    .logo-title {
+        font-size: 14px;
+        letter-spacing: 0.6px;
+    }
+
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+}
+
